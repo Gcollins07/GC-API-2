@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  color: #192b40;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input:focus {
+outline: none;
+}
+
+.orange {
+    color: #ed6809;
+}
+
+#landing {
+    height: 100vh;
+}
+
+/* 
+
+HEADER
+
+*/
+
+header {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo--wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 140px;
+}
+
+.nav__link--list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  padding: 0 12px;
+  color: #242424;
+  transition: all 300ms ease;
+}
+
+.nav__link--primary {
+    font-weight: 400;
+    padding: 8px 24px;
+    margin-left: 16px;
+    color: white;
+    background-color: #192b40;
+    border: 2px #192b40;
+    border-radius: 20px;
+}
+
+.nav__link--primary:hover {
+    color: #192b40;
+    background-color: #ed6809;
+}
+
+.nav__link:active {
+    transform: scale(0.8);
+}
+
+.search {
+    width: 100%;
+    max-width: 800px;
+display: flex;
+flex-direction: column;
+text-align: center;
+padding: 0 24px;
+
+}
+
+.search__title {
+    font-size: 48px;
+    margin-top: 100px;
+}
+
+.search__subtitle {
+    font-size: 30px;
+    margin-top: 24px;
+}
+
+.search__bar--wrapper {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  border:#242424 2px solid;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.search__bar {
+  color: #192b40;
+  width: 100%;
+  max-width: 800px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+  border: none;
+}
+
+.search__btn--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 20px 0 8px;
+  color: #192b40;
+  font-size: 32px;
+  transition: all 0.2s ease;
+}
+
+
+
+/* 
+
+
+
+*/
