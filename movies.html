@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header class="movies__header">
+          <nav class="movies__nav">
+            <div class="container">
+              <div class="row nav__row movies__nav--row">
+                <figure class="nav__logo--wrapper">
+                  <img
+                    src="assets/logo-white.png"
+                    class="nav__logo navlogo--white nav__logo-img"
+                  />
+                </figure>
+                <ul class="nav__link--list">
+                  <a href="./index.html" class="nav__link">Home</a>
+                  <a href="" class="nav__link">Contact</a>
+                  <a href="./movies.html" class="nav__link nav__link--primary"
+                    >All Movies</a
+                  >
+                </ul>
+              </div>
+              <div class="movies__search--row">
+
+                  <h1 class="section__title search__label">
+                      Find Any <span class="orange">Movie</span>
+                    </h1>
+                    <div class="movies__search">
+                        <div class="search-bar__wrapper">
+                            <input type="text" placeholder="Search by Title or Year" class="search-bar" />
+                            <a
+                            href="./movies.html"
+                            class="search--wrapper search__wrapper--movies"
+                            >
+                            <i
+                            class="fa-solid fa-magnifying-glass search__btn search__btn--movies"
+                            ></i>
+                        </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </section>
+      <section id="movies">
+        <div class="container">
+          <div class="row">
+            <h1 class="section__title">Movies</h1>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="row footer__row">
+        <figure class="footer__logo">
+          <img src="assets/logo-white.png" class="footer__logo" alt="" />
+        </figure>
+        <div class="footer__link--list">
+          <a class="footer__link" href="#">Home</a>
+          <a class="footer__link" href="#">Contact</a>
+          <a class="footer__link" href="./movies.html">Movies</a>
+        </div>
+        <div class="footer__copyright">Copyright © 2025 Garrett Collins</div>
+      </div>
+    </footer>
+  </body>
+</html>
