@@ -5,6 +5,7 @@
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
   color: #111f32;
+  ;
 }
 
 a {
@@ -33,18 +34,14 @@ input:focus {
 
 /* 
 
-HEADER
+NAV
 
 */
-
-header {
-  width: 100%;
-}
 
 nav {
   max-width: 100%;
   background-color: #111f32;
-  height: 120px;
+  height: 400px;
 }
 
 .nav__row {
@@ -63,17 +60,20 @@ nav {
 
 .nav__logo {
   width: 140px;
+  background-color: #111f32;
 }
 
 .nav__link--list {
   display: flex;
   align-items: center;
+  background-color: #111f32;
 }
 
 .nav__link {
   padding: 0 12px;
   color: #dfdee0;
   transition: all 300ms ease;
+  background-color: #111f32;
 }
 
 .nav__link:hover {
@@ -100,13 +100,27 @@ nav {
   transform: scale(0.8);
 }
 
-.search {
-  width: 100%;
-  max-width: 800px;
+/*
+  
+MOVIES HEADER
+
+*/
+
+.movies__nav {
+  background-color: #111f32;
+  color: #dfdee0;
+}
+
+.movies__search--row {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 0 24px;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.search__label {
+  color: #dfdee0;
+  font-size: 32px;
 }
 
 .search__title {
@@ -127,10 +141,16 @@ nav {
   border-radius: 50px;
   overflow: hidden;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease;
 }
 
 .search-bar__wrapper:hover {
   border-color: #ed6809;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 .search-bar {
@@ -139,28 +159,112 @@ nav {
   max-width: 800px;
   height: 60px;
   font-size: 20px;
-  padding-left: 20px;
   border: none;
-}
-
-.search--wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  padding: 0 20px 0 8px;
-  color: #192b40;
-  font-size: 32px;
-  transition: all 0.2s ease;
+   flex: 1;
+padding: 0 24px;  
+background: transparent;
 }
 
 .fa-magnifying-glass:active {
   color: #ed6809;
+}
+
+.search-bar::placeholder {
+  color: #646363;
+}
+
+.search__wrapper {
+  background: #dfdee0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  font-size: 22px;
+  color: #fff;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.search__wrapper:hover {
+  background: #c55307;
+}
+
+.search__wrapper:active {
+  transform: scale(0.95);
+}
+
+.search__btn {
+  color: #ed6809;
+  font-size: 24px;
+}
+
+/* 
+
+MOVIES MAIN
+
+*/
+
+#movies {
+  width: 100%;
+  min-height: 800px;
+  background-color: #dfdee0;
+  padding: 32px 0;
+}
+
+.results__header {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+}
+
+.results__container {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+  padding-top: 32px;
+  padding: 1rem;
+}
+
+.movie-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111f32;
+  margin: 0.75rem 0;
+  padding: 0 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.results__container p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #111f32;
 }
 
 /* 
@@ -204,49 +308,4 @@ footer {
   font-size: 12px;
   color: #dfdee0;
   padding-top: 12px;
-}
-
-/*
-  
-MOVIES HEADER
-
-*/
-
-#movies .container {
-  width: 100%;
-  height: 30vh;
-  background-color: #111f32;
-}
-
-.movies__nav {
-  background-color: #111f32;
-  color: #dfdee0;
-}
-
-.search__label {
-  color: #dfdee0;
-  font-size: 32px;
-}
-
-.movies__search--row {
-display: flex;
-flex-direction: column;
-}
-
-.movies__search {
-  width: 100%;
-  max-width: 400px;
-}
-
-/* 
-
-MOVIES MAIN
-
-*/
-
-#movies {
-  width: 100%;
-  height: 800px;
-  background-color: #dfdee0;
-
 }

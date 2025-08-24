@@ -11,8 +11,8 @@
     <main>
       <section>
         <header class="movies__header">
-          <nav class="movies__nav">
-            <div class="container">
+          <div class="container">
+            <nav>
               <div class="row nav__row movies__nav--row">
                 <figure class="nav__logo--wrapper">
                   <img
@@ -21,42 +21,44 @@
                   />
                 </figure>
                 <ul class="nav__link--list">
-                  <a href="./index.html" class="nav__link">Home</a>
+                  <a href="#" class="nav__link">Home</a>
                   <a href="" class="nav__link">Contact</a>
                   <a href="./movies.html" class="nav__link nav__link--primary"
-                    >All Movies</a
+                    >Movies</a
                   >
                 </ul>
               </div>
               <div class="movies__search--row">
-
-                  <h1 class="section__title search__label">
-                      Find Any <span class="orange">Movie</span>
-                    </h1>
-                    <div class="movies__search">
-                        <div class="search-bar__wrapper">
-                            <input type="text" placeholder="Search by Title or Year" class="search-bar" />
-                            <a
-                            href="./movies.html"
-                            class="search--wrapper search__wrapper--movies"
-                            >
-                            <i
-                            class="fa-solid fa-magnifying-glass search__btn search__btn--movies"
-                            ></i>
-                        </a>
-                    </div>
+                <h1 class="section__title search__label">
+                  Find Any <span class="orange">Movie</span>
+                </h1>
+                <div class="search-bar__wrapper">
+                  <input
+                    type="text"
+                    placeholder="Search by Title"
+                    class="search-bar"
+                  />
+                  <a href="./movies.html" class="search__wrapper">
+                    <i class="fa-solid fa-magnifying-glass search__btn"></i>
+                  </a>
                 </div>
               </div>
-            </div>
-          </nav>
+            </nav>
+          </div>
         </header>
       </section>
       <section id="movies">
-        <div class="container">
-          <div class="row">
-            <h1 class="section__title">Movies</h1>
-          </div>
+        <div class="row results__header">
+          <h1 class="section__title">Movies</h1>
+          <select id="filter">
+            <option value="" disabled selected>Sort</option>
+            <option value="A-Z">A-Z</option>
+            <option value="LOW_TO_HIGH">Year, Newest to Oldest</option>
+            <option value="HIGH_TO_LOW">Year, Oldest to Newest</option>
+            <option value="RATING">Rating</option>
+          </select>
         </div>
+        <div class="container results__container"></div>
       </section>
     </main>
     <footer>
@@ -67,7 +69,7 @@
         <div class="footer__link--list">
           <a class="footer__link" href="#">Home</a>
           <a class="footer__link" href="#">Contact</a>
-          <a class="footer__link" href="./movies.html">Movies</a>
+          <a class="footer__link" href="#movies">Movies</a>
         </div>
         <div class="footer__copyright">Copyright © 2025 Garrett Collins</div>
       </div>
