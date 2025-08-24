@@ -2,7 +2,9 @@
 // `http://img.omdbapi.com/?apikey=[d0e2373f]&`
 
 
-const moviesImg = fetch(`http://img.omdbapi.com/?apikey=d0e2373f&`)
+// const moviesImg = fetch(`http://img.omdbapi.com/?apikey=d0e2373f&`)
+
+
 const searchBtn = document.querySelector('.search__btn');
 const searchInput = document.querySelector('.search-bar');
 const resultsContainer = document.querySelector('.results__container');
@@ -10,7 +12,7 @@ const resultsContainer = document.querySelector('.results__container');
 const apiKey = 'd0e2373f';
 
 searchBtn.addEventListener('click', async (event) => {
-  event.preventDefault(); // stop the <a> from navigating
+  event.preventDefault();
 
   const searchTerm = searchInput.value.trim();
 
