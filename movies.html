@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies List</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/e20c89559c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main>
@@ -21,41 +25,76 @@
                   />
                 </figure>
                 <ul class="nav__link--list">
-                  <a href="#" class="nav__link">Home</a>
-                  <a href="" class="nav__link">Contact</a>
-                  <a href="./movies.html" class="nav__link nav__link--primary"
-                    >Movies</a
-                  >
+                  <li><a href="#" class="nav__link">Home</a></li>
+                  <li><a href="" class="nav__link">Contact</a></li>
+                  <li>
+                    <a href="#" class="nav__link nav__link--primary">Movies</a>
+                  </li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                  <button
+                    class="btn__menu btn__menu--close"
+                    onclick="closeMenu()"
+                  >
+                    <i class="fa-solid fa-times"></i>
+                  </button>
+                  <ul class="menu__links">
+                    <li class="menu__list">
+                      <a href="#" class="menu__link" onclick="closeMenu()"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="menu__list">
+                      <a href="#" class="menu__link" onclick="closeMenu()"
+                        >Contact</a
+                      >
+                    </li>
+                    <li class="menu__list">
+                      <a
+                        href="#"
+                        class="menu__link no-cursor"
+                        onclick="closeMenu()"
+                        >Movies</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
+            </nav>
+            <div class="movies__search--container">
               <div class="movies__search--row">
                 <h1 class="section__title search__label">
-                  Find Any <span class="orange">Movie</span>
+                  Find Any <span class="orange">Movie</span> or
+                  <span class="orange">Show</span>
                 </h1>
-                <div class="search-bar__wrapper">
+                <form class="search-bar__wrapper">
                   <input
                     type="text"
                     placeholder="Search by Title"
                     class="search-bar"
                   />
-                  <a href="./movies.html" class="search__wrapper">
-                    <i class="fa-solid fa-magnifying-glass search__btn"></i>
-                  </a>
-                </div>
+                  <button class="search__wrapper search__btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
               </div>
-            </nav>
+              <div class="header__overlay"></div>
+            </div>
           </div>
         </header>
       </section>
       <section id="movies">
         <div class="row results__header">
           <h1 class="section__title">Movies</h1>
-          <select id="filter">
+          <select id="filter" onchange="filterMovies(filter)">
             <option value="" disabled selected>Sort</option>
             <option value="A-Z">A-Z</option>
-            <option value="LOW_TO_HIGH">Year, Newest to Oldest</option>
-            <option value="HIGH_TO_LOW">Year, Oldest to Newest</option>
-            <option value="RATING">Rating</option>
+            <option value="Z-A">Z-A</option>
+            <option value="NEW_TO_OLD">Year, Newest to Oldest</option>
+            <option value="OLD_TO_NEW">Year, Oldest to Newest</option>
           </select>
         </div>
         <div class="container results__container"></div>
